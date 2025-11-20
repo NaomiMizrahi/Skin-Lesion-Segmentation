@@ -34,7 +34,7 @@ It compares several preprocessing pipelines and segmentation models to determine
 #### **Training & Evaluation**
 - Full training/validation pipeline  
 - Dice score, IoU, and additional segmentation metrics  
-- Visual error analysis  
+- Prediction visualization
 
 The final goal is to develop a robust segmentation model that improves lesion-boundary precision and supports downstream diagnostic tasks.
 
