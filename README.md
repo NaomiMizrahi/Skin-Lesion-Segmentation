@@ -3,8 +3,6 @@
 This repository contains an end-to-end pipeline for **skin-lesion segmentation**, implemented in a Jupyter Notebook.  
 The project evaluates how different **preprocessing strategies**, **model architectures**, and an **attention-based refinement module** influence segmentation performance.
 
-> **Note:** Training is still running — detailed quantitative results will be added once all experiments finish.
-
 ---
 
 ## Project Overview
@@ -68,7 +66,6 @@ Across all experiments, the following are computed:
 - **Intersection-over-Union (IoU)**
 - Precision
 - Recall
-- Qualitative **visualizations of predictions** (overlay of masks on the original images)
 
 The final goal is to develop a robust segmentation model that improves lesion-boundary precision and can support downstream diagnostic tasks.
 
@@ -96,9 +93,9 @@ The following tables summarize the performance of all models across the three ex
 
 | Model                                | Dice | IoU  | Precision | Recall |
 |--------------------------------------|------|------|-----------|--------|
-| U-Net                                |      |      |           |        |
-| EfficientNet-B0 + U-Net              |      |      |           |        |
-| EfficientNet-B0 + U-Net++            |      |      |           |        |
+| U-Net                                |90.56%|82.74%|  85.08%   | 96.78% |
+| EfficientNet-B0 + U-Net              |91.25%|83.91%|  85.39%   | 97.99% |
+| EfficientNet-B0 + U-Net++            |93.25%|87.35%|  90.03%   | 96.70% |
 
 ---
 
