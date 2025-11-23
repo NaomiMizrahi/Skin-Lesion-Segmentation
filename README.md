@@ -47,7 +47,7 @@ This experiment tests whether adding hair removal and contrast enhancement impro
   - EfficientNet-B0 encoder + U-Net decoder  
 
 - **Post-processing / Refinement:**
-  - A CBAM-based refinement head applied **after** the main segmentation logits  
+  - A CBAM-based refinement head applied after the main segmentation logits  
     - The base model outputs a segmentation map  
     - A lightweight CBAM module refines this map to improve lesion boundaries and reduce small artifacts  
 
