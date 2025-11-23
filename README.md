@@ -3,7 +3,6 @@
 This repository contains an end-to-end pipeline for **skin-lesion segmentation**, implemented in a Jupyter Notebook.  
 The project evaluates how different **preprocessing strategies**, **model architectures**, and an **attention-based refinement module** influence segmentation performance.
 
----
 
 ## Project Overview
 
@@ -23,7 +22,6 @@ The experiments are organized as follows:
   - EfficientNet-B0 encoder + U-Net decoder  
   - EfficientNet-B0 encoder + U-Net++ decoder  
 
----
 
 ### **Experiment 2 – Advanced Preprocessing (Hair Removal + CLAHE)**
 
@@ -39,7 +37,6 @@ The experiments are organized as follows:
 
 This experiment tests whether adding hair removal and contrast enhancement improves performance over the baseline from Experiment 1.
 
----
 
 ### **Experiment 3 – Attention-Based Refinement (CBAM)**
 
@@ -56,7 +53,6 @@ This experiment tests whether adding hair removal and contrast enhancement impro
 
 This experiment isolates the effect of the CBAM refinement compared to the baseline EfficientNet+U-Net configuration from Experiment 1.
 
----
 
 ## Metrics & Evaluation
 
@@ -69,13 +65,16 @@ Across all experiments, the following are computed:
 
 The final goal is to develop a robust segmentation model that improves lesion-boundary precision and can support downstream diagnostic tasks.
 
----
+## Data
+
+This project uses dermoscopic images from the **HAM10000** dataset and related research sources.  
+The dataset itself is **not included** in this repository.  
+
 
 ## Results
 
 The following tables summarize the performance of all models across the three experiments.  
 
----
 
 ### **Experiment 1 – Baseline Preprocessing (Resize + Normalize)**
 
@@ -85,7 +84,6 @@ The following tables summarize the performance of all models across the three ex
 | EfficientNet-B0 + U-Net              |92.08%|85.33%|  86.90%   | 97.93% |
 | EfficientNet-B0 + U-Net++            |92.13%|85.41%|  87.84%   | 96.87% |
 
----
 
 ### **Experiment 2 – Advanced Preprocessing (Hair Removal + CLAHE)**
 
@@ -95,7 +93,6 @@ The following tables summarize the performance of all models across the three ex
 | EfficientNet-B0 + U-Net              |90.69%|82.97%|  84.82%   | 97.45% |
 | EfficientNet-B0 + U-Net++            |90.84%|83.22%|  84.86%   | 97.71% |
 
----
 
 ### **Experiment 3 – Attention-Based Refinement (CBAM)**
 
@@ -104,7 +101,6 @@ The following tables summarize the performance of all models across the three ex
 | EfficientNet-B0 + U-Net (no CBAM)    |92.08%|85.33%|  86.90%   | 97.93% |
 | EfficientNet-B0 + U-Net + CBAM       |92.83%|86.61%|  88.62%   | 97.46% |
 
----
 
 ### **Summary Comparison**
 
@@ -115,14 +111,6 @@ The following tables summarize the performance of all models across the three ex
 | Exp 2      | EfficientNet-B0 + U-Net++ + PreProcessing|90.84%|83.22%|
 | Exp 3      | EfficientNet-B0 + U-Net + CBAM        |92.83%|86.61%| 
 
----
-
-
-
-## Data
-
-This project uses dermoscopic images from the **HAM10000** dataset and related research sources.  
-The dataset itself is **not included** in this repository.  
 
 ## Conclusion
 
