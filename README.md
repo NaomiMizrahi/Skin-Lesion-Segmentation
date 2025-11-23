@@ -79,7 +79,6 @@ The final goal is to develop a robust segmentation model that improves lesion-bo
 ## Results
 
 The following tables summarize the performance of all models across the three experiments.  
-Fill in the Dice / IoU / Precision / Recall values once training finishes.
 
 ---
 
