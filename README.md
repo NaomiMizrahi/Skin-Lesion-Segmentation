@@ -71,8 +71,6 @@ The final goal is to develop a robust segmentation model that improves lesion-bo
 
 ---
 
----
-
 ## Results
 
 The following tables summarize the performance of all models across the three experiments.  
@@ -93,9 +91,9 @@ The following tables summarize the performance of all models across the three ex
 
 | Model                                | Dice | IoU  | Precision | Recall |
 |--------------------------------------|------|------|-----------|--------|
-| U-Net                                |90.56%|82.74%|  85.08%   | 96.78% |
-| EfficientNet-B0 + U-Net              |91.25%|83.91%|  85.39%   | 97.99% |
-| EfficientNet-B0 + U-Net++            |93.25%|87.35%|  90.03%   | 96.70% |
+| U-Net                                |88.26%|78.99%|  81.11%   | 96.80% |
+| EfficientNet-B0 + U-Net              |90.69%|82.97%|  84.82%   | 97.45% |
+| EfficientNet-B0 + U-Net++            |90.84%|83.22%|  84.86%   | 97.71% |
 
 ---
 
@@ -114,7 +112,7 @@ The following tables summarize the performance of all models across the three ex
 | Experiment |             Best Model                | Dice | IoU  |
 |------------|---------------------------------------|------|------|
 | Exp 1      | EfficientNet-B0 + U-Net++             |92.03%|85.41%|
-| Exp 2      | EfficientNet-B0 + U-Net++ + PreProcessing|92.83%|86.61%|
+| Exp 2      | EfficientNet-B0 + U-Net++ + PreProcessing|90.84%|83.22%|
 | Exp 3      | EfficientNet-B0 + U-Net + CBAM        |92.83%|86.61%| 
 
 ---
@@ -125,6 +123,10 @@ The following tables summarize the performance of all models across the three ex
 
 This project uses dermoscopic images from the **HAM10000** dataset and related research sources.  
 The dataset itself is **not included** in this repository.  
+
+## Conclusion
+
+This project investigates how preprocessing choices, model architecture, and attention-based refinement affect skin-lesion segmentation performance. The results show that EfficientNet-based U-Net models clearly outperform the standard U-Net baseline. Traditional preprocessing techniques such as hair removal and CLAHE do not provide measurable improvement beyond simple resizing and normalization. In contrast, adding a lightweight CBAM refinement module after the segmentation logits yields the best overall performance, improving Dice and IoU.
 
 **References:**
 
